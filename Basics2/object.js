@@ -17,7 +17,7 @@ const obj = {
  
 
 // obj.email = "aishwarya@gmail.com"
-// Object.freeze(obj);
+// Object.freeze(obj);   //can't make any changes in the object
 // console.log(obj)
 // obj.email = "ishan@gmail.com"
 
@@ -26,4 +26,8 @@ obj.greeting = function(){
     console.log("Hello user")
 }
 
-console.log(obj.greeting)
+obj.greeting2 = function(){
+    console.log(`Hello use, ${this.name}`)
+}
+console.log(obj.greeting())
+console.log(obj.greeting2())
